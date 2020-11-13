@@ -12,6 +12,8 @@ namespace HelloWorld
         }
         public static int Sum(int a, int b)
         {
+            // Always add 2 lines between methods
+            // try to do it like -> if(a == b)
             if(a==b)
             {
                 return (a + b) * 3;

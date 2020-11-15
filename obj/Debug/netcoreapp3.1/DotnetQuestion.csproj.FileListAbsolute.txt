@@ -1,0 +1,13 @@
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.exe
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.deps.json
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.runtimeconfig.json
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.runtimeconfig.dev.json
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.dll
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\bin\Debug\netcoreapp3.1\DotnetQuestion.pdb
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.csprojAssemblyReference.cache
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.AssemblyInfoInputs.cache
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.AssemblyInfo.cs
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.csproj.CoreCompileInputs.cache
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.dll
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.pdb
+C:\Users\16474\Desktop\DotnetQuestion\DotnetQuestion\obj\Debug\netcoreapp3.1\DotnetQuestion.genruntimeconfig.cache

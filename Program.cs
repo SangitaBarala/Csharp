@@ -52,7 +52,6 @@ namespace DotnetQuestion
             int[] array = { 1, 2, 3, 4, 5 };
             Console.WriteLine("array is "+string.Join(",",array));
             Console.WriteLine("new array is "+ string.Join(",",(rotate(array,2))));
-
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
@@ -213,7 +212,5 @@ namespace DotnetQuestion
             }
             return newArray;
         }
-
-
     }
 }

@@ -52,10 +52,16 @@ namespace DotnetQuestion
             int[] array = { 1, 2, 3, 4, 5 };
             Console.WriteLine("array is "+string.Join(",",array));
             Console.WriteLine("new array is "+ string.Join(",",(rotate(array,2))));
+
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
-         * If the two values are the same, then return triple their sum.*/
+         * If the two values are the same, then return triple their sum.
+         * 
+         * @param int a
+         * @param int b
+         * @return int
+         */
 
         public static int Sum(int a, int b)
         {
@@ -69,8 +75,12 @@ namespace DotnetQuestion
             }
         }
 
-        /*Q2:Write a C# Sharp program to check two given integers, and return true if one of them is 30 or if their sum is 30.*/
-
+        /*Q2:Write a C# Sharp program to check two given integers, and return true if one of them is 30 or if their sum is 30.
+         
+         * @param boolean a
+         * @param booeanl b
+         * @return boolean
+         */
         public static Boolean check(int a, int b)
         {
             if ((a == 30 || b == 30) || (a + b) == 30)
@@ -84,7 +94,11 @@ namespace DotnetQuestion
         }
 
         /*Q3: Write a C# Sharp program to create a new string where 'if' is added to the front of a given string. 
-         * If the string already begins with 'if', return the string unchanged*/
+         * If the string already begins with 'if', return the string unchanged.
+         * 
+         * @param string str
+         * return string
+         */
 
         public static string append(string str)
         {
@@ -99,14 +113,23 @@ namespace DotnetQuestion
         }
 
         /*Q4;Write a C# Sharp program to remove the character in a given position of a given string. 
-         * The given position will be in the range 0.. string length -1 inclusive.*/
+         * The given position will be in the range 0.. string length -1 inclusive.
+         
+         * @param string str
+         * @param int n
+         * @return string
+         */
 
         public static string Check1(string str, int n)
         {
             return str.Remove(n, 1);
         }
 
-        /*Q5:Write a C# Sharp program to exchange the first and last characters in a given string and return the new string.*/
+        /*Q5:Write a C# Sharp program to exchange the first and last characters in a given string and return the new string.
+         
+         * @param string s
+         * @return string
+         */
 
         public static string check2(string s)
         {
@@ -121,8 +144,11 @@ namespace DotnetQuestion
         }
 
         /*Q6:Write a C# Sharp program to create a new string which is 4 copies of the 2 front characters of a given string. If the given string
-         * length is less than 2 return the original string.*/
-
+         * length is less than 2 return the original string.
+         
+         * @param string str
+         * @return string
+         */
         public static string repeat(string str)
         {
             if (str.Length < 2)
@@ -136,7 +162,10 @@ namespace DotnetQuestion
         }
 
         /*Q7:Write a C# Sharp program to create a new string with the last char added at the front and
-            back of a given string of length 1 or more.*/
+            back of a given string of length 1 or more.
+        
+         * @param string str
+         * @return string*/
 
         public static string Addstr(string str)
         {
@@ -144,8 +173,11 @@ namespace DotnetQuestion
         }
 
         /*Q8:Write a C# Sharp program to create a new string taking the first 3 characters of a given string and return the string with
-         the 3 characters added at both the front and back.If the given string length is less than 3, use whatever characters are there.*/
-
+         the 3 characters added at both the front and back.If the given string length is less than 3, use whatever characters are there.
+        
+         * @param string str
+         * @return string
+         */
         public static string checkstr(string str)
         {
             if (str.Length < 3)
@@ -158,7 +190,11 @@ namespace DotnetQuestion
             }
         }
 
-        /*Q9:Write a C# Sharp program to check if a given string starts with 'C#' or not.*/
+        /*Q9:Write a C# Sharp program to check if a given string starts with 'C#' or not.
+         
+         * @param string str
+         * @return Boolean
+         */
 
         public static Boolean checkfirststr(string str)
         {
@@ -173,7 +209,13 @@ namespace DotnetQuestion
         }
 
         /*Q10:Write a C# Sharp program to check whether three given integer values are in the range 20..50 inclusive. 
-         Return true if 1 or more of them are in the said range otherwise false.*/
+         Return true if 1 or more of them are in the said range otherwise false.
+        
+         * @param int a
+         * @param int b
+         * @param int c
+         * @return boolean
+         */
 
         public static Boolean RangeTest(int a, int b, int c)
         {
@@ -187,7 +229,11 @@ namespace DotnetQuestion
             }
         }
 
-        /*Q11: Array left rotation*/
+        /*Q11: Array left rotation
+         
+         * @param int[] array
+         * @param int d
+         * @return int[] array*/
         public static int[] rotate(int[] array, int d)
         {
             /* int i = Convert.ToInt32(Console.ReadLine());

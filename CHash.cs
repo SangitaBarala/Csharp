@@ -46,7 +46,8 @@ namespace DotnetQuestion
             Console.WriteLine(RangeTest(11, 34, 10));
             Console.WriteLine(RangeTest(10, 16, 17));
             Console.WriteLine(RangeTest(11, 34, 50));
-        }
+
+           }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
          * If the two values are the same, then return triple their sum.
@@ -215,6 +216,6 @@ namespace DotnetQuestion
             {
                 return false;
             }
-        }     
+        }
     }
 }

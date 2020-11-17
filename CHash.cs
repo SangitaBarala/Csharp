@@ -47,7 +47,11 @@ namespace DotnetQuestion
             Console.WriteLine(RangeTest(10, 16, 17));
             Console.WriteLine(RangeTest(11, 34, 50));
 
-           }
+            Console.WriteLine("Q11:output");
+            int[] array = { 1, 2, 3, 4, 5 };
+            Console.WriteLine("array is " + string.Join(",", array));
+            Console.WriteLine("new array is " + string.Join(",",(rotate(array,2))));
+        }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
          * If the two values are the same, then return triple their sum.
@@ -216,6 +220,32 @@ namespace DotnetQuestion
             {
                 return false;
             }
+        }
+
+        /*Q11:Array rotation. 
+                
+         * @param int[] array
+         * @param int d
+         * @return int[] array
+         */
+        public static int[] rotate(int[] array, int d)
+        {
+            int[] newArray = new int[array.Length];
+            for(int i=0; i<array.Length; i++)
+            {
+                int arrIndex = i - d;
+                int rotation = array.Length + arrIndex;
+
+                if(arrIndex>=0)
+                {
+                    newArray[arrIndex] = array[i];
+                }
+                else
+                {
+                    newArray[rotation] = array[i];
+                }
+            }
+            return newArray;
         }
     }
 }

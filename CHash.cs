@@ -1,15 +1,14 @@
-﻿using System;
+using System;
 
 namespace DotnetQuestion
 {
-    class Program
+    class CHash
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Q1:output");
             Console.WriteLine(Sum(20, 20));
             Console.WriteLine(Sum(20, 30));
-
 
             Console.WriteLine("Q2:output");
             Console.WriteLine(check(30, 20));
@@ -47,12 +46,6 @@ namespace DotnetQuestion
             Console.WriteLine(RangeTest(11, 34, 10));
             Console.WriteLine(RangeTest(10, 16, 17));
             Console.WriteLine(RangeTest(11, 34, 50));
-
-            Console.WriteLine("Q11:output");
-            int[] array = { 1, 2, 3, 4, 5 };
-            Console.WriteLine("array is "+string.Join(",",array));
-            Console.WriteLine("new array is "+ string.Join(",",(rotate(array,2))));
-
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
@@ -62,7 +55,6 @@ namespace DotnetQuestion
          * @param int b
          * @return int
          */
-
         public static int Sum(int a, int b)
         {
             if (a == b)
@@ -119,7 +111,6 @@ namespace DotnetQuestion
          * @param int n
          * @return string
          */
-
         public static string Check1(string str, int n)
         {
             return str.Remove(n, 1);
@@ -130,7 +121,6 @@ namespace DotnetQuestion
          * @param string s
          * @return string
          */
-
         public static string check2(string s)
         {
             if (s.Length == 1)
@@ -166,11 +156,11 @@ namespace DotnetQuestion
         
          * @param string str
          * @return string*/
-
-        public static string Addstr(string str)
+       public static string Addstr(string str)
         {
             return str.Substring(str.Length - 1) + str + str.Substring(str.Length - 1);
         }
+
 
         /*Q8:Write a C# Sharp program to create a new string taking the first 3 characters of a given string and return the string with
          the 3 characters added at both the front and back.If the given string length is less than 3, use whatever characters are there.
@@ -195,8 +185,7 @@ namespace DotnetQuestion
          * @param string str
          * @return Boolean
          */
-
-        public static Boolean checkfirststr(string str)
+       public static Boolean checkfirststr(string str)
         {
             if (str.StartsWith("C#"))
             {
@@ -216,7 +205,6 @@ namespace DotnetQuestion
          * @param int c
          * @return boolean
          */
-
         public static Boolean RangeTest(int a, int b, int c)
         {
             if ((a >= 20 && a <= 50) || (b >= 20 && b <= 50) || (c >= 20 && c <= 50))
@@ -227,36 +215,6 @@ namespace DotnetQuestion
             {
                 return false;
             }
-        }
-
-        /*Q11: Array left rotation
-         
-         * @param int[] array
-         * @param int d
-         * @return int[] array*/
-        public static int[] rotate(int[] array, int d)
-        {
-            /* int i = Convert.ToInt32(Console.ReadLine());
-             int arrIndex = Convert.ToInt32(Console.ReadLine());
-             int rotation = Convert.ToInt32(Console.ReadLine());*/
-            
-            int[] newArray = new int[array.Length];
-            for (int i = 0; i < array.Length; i++)
-            {
-                
-                int arrIndex = i-d;
-                int rotation = array.Length + arrIndex;
-
-                if (arrIndex >= 0)
-                {
-                    newArray[arrIndex] = array[i];
-                }
-                else
-                {
-                    newArray[rotation] = array[i];
-                }
-            }
-            return newArray;
-        }
+        }     
     }
 }

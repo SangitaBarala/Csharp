@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\16474\\Desktop\\DotnetQuestion\\DotnetQuestion\\DotnetQuestion.csproj": {}
+    "C:\\Users\\16474\\Desktop\\hash\\DotnetQuestion\\DotnetQuestion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\16474\\Desktop\\DotnetQuestion\\DotnetQuestion\\DotnetQuestion.csproj": {
+    "C:\\Users\\16474\\Desktop\\hash\\DotnetQuestion\\DotnetQuestion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\16474\\Desktop\\DotnetQuestion\\DotnetQuestion\\DotnetQuestion.csproj",
+        "projectUniqueName": "C:\\Users\\16474\\Desktop\\hash\\DotnetQuestion\\DotnetQuestion.csproj",
         "projectName": "DotnetQuestion",
-        "projectPath": "C:\\Users\\16474\\Desktop\\DotnetQuestion\\DotnetQuestion\\DotnetQuestion.csproj",
+        "projectPath": "C:\\Users\\16474\\Desktop\\hash\\DotnetQuestion\\DotnetQuestion.csproj",
         "packagesPath": "C:\\Users\\16474\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\16474\\Desktop\\DotnetQuestion\\DotnetQuestion\\obj\\",
+        "outputPath": "C:\\Users\\16474\\Desktop\\hash\\DotnetQuestion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\16474\\AppData\\Roaming\\NuGet\\NuGet.Config",

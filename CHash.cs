@@ -51,6 +51,9 @@ namespace DotnetQuestion
             int[] array = { 1, 2, 3, 4, 5 };
             Console.WriteLine("array is " + string.Join(",", array));
             Console.WriteLine("new array is " + string.Join(",",(rotate(array,2))));
+
+            Console.WriteLine("Q12:output");
+            Console.Write(substr("HelloWorld","3 7"));
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
@@ -246,6 +249,35 @@ namespace DotnetQuestion
                 }
             }
             return newArray;
+        }
+
+        /*Q12 grab a substring that lies in given range of start and end.
+         * 
+         * @param string str
+         * @param string value
+         * return string
+         */
+        public static string substr(string str, string value)
+        {
+            string[] names =( value.Split(" "));
+            int s = Convert.ToInt32(names[0]);
+            int e = Convert.ToInt32(names[1]);
+
+            foreach(char c in str)
+            {
+                if(!char.IsLetter(c))
+                {
+                    Console.WriteLine("enter a valid string");
+                }
+               
+            }
+            if (s < 0 || s >= e || e > str.Length)
+            {
+                Console.WriteLine("value is out of bound");
+            }
+
+            int Strlength = e - s;
+            return str.Substring(s, Strlength);    
         }
     }
 }

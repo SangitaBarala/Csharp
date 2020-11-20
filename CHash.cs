@@ -59,7 +59,7 @@ namespace DotnetQuestion
 
             Console.WriteLine("Q13:output");
             string[] name = {"julia","1julia","samantha","samantha_21","samatha-21"};
-            Console.WriteLine(Validate(name));
+            /*Console.WriteLine(Validate(name));*/
 
             Console.WriteLine("Q14:output");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -67,6 +67,15 @@ namespace DotnetQuestion
             int k = Convert.ToInt32(Console.ReadLine());
             string result = Cipher(s, k);
             Console.WriteLine(result);
+
+            Console.WriteLine("Q15:output");
+            string[] values = {"lmnop","bcxz","acxz"};
+            string[] result1 = funnyStr(3,values);
+            for(int i=0; i<result1.Length; i++)
+            {
+                Console.WriteLine(result1[i]);
+            }
+
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
@@ -373,6 +382,35 @@ namespace DotnetQuestion
                 }   
             }
             return s.ToString();
+        }
+
+        /*Q14 Based on the absolute diffrence between ASCII value of string's letter check whether string is funny or not funny.
+         
+         * @param int q
+         * @param string s
+         * @return string
+         */
+        public static string[] funnyStr(int q, string[] s)
+        {
+            string[] result= new string [q];
+            for(int i = 0; i < s.Length; i++)
+            {
+                char[] strArray = s[i].ToCharArray();
+                Array.Reverse(strArray);
+                string rev = new string(strArray);
+                int temp = 0;
+                for(int j = 1; j < strArray.Length; j++)
+                {
+                    int orgStr = Math.Abs((int)s[i][j]-(int)s[i][j-1]);
+                    int revStr = Math.Abs((int)rev[j] - (int)rev[j - 1]);
+                    if(orgStr != revStr)
+                    {
+                        temp = temp + 1;
+                    }
+                }
+                result[i] = (temp != 0 ? "Not Funny" : "Funny");
+            }
+            return result;
         }
     }
 }

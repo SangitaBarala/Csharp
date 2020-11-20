@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Text;
 
 namespace DotnetQuestion
 {
@@ -50,10 +52,21 @@ namespace DotnetQuestion
             Console.WriteLine("Q11:output");
             int[] array = { 1, 2, 3, 4, 5 };
             Console.WriteLine("array is " + string.Join(",", array));
-            Console.WriteLine("new array is " + string.Join(",",(rotate(array,2))));
+            Console.WriteLine("new array is " + string.Join(",", (rotate(array, 2))));
 
             Console.WriteLine("Q12:output");
-            Console.Write(substr("HelloWorld","3 7"));
+            Console.Write(substr("HelloWorld", "3 7"));
+
+            Console.WriteLine("Q13:output");
+            string[] name = {"julia","1julia","samantha","samantha_21","samatha-21"};
+            Console.WriteLine(Validate(name));
+
+            Console.WriteLine("Q14:output");
+            int n = Convert.ToInt32(Console.ReadLine());
+            StringBuilder s = new StringBuilder(Console.ReadLine());
+            int k = Convert.ToInt32(Console.ReadLine());
+            string result = Cipher(s, k);
+            Console.WriteLine(result);
         }
 
         /*Q1:.Write a C# Sharp program to compute the sum of the two given integer values. 
@@ -164,7 +177,7 @@ namespace DotnetQuestion
         
          * @param string str
          * @return string*/
-       public static string Addstr(string str)
+        public static string Addstr(string str)
         {
             return str.Substring(str.Length - 1) + str + str.Substring(str.Length - 1);
         }
@@ -193,7 +206,7 @@ namespace DotnetQuestion
          * @param string str
          * @return Boolean
          */
-       public static Boolean checkfirststr(string str)
+        public static Boolean checkfirststr(string str)
         {
             if (str.StartsWith("C#"))
             {
@@ -234,12 +247,12 @@ namespace DotnetQuestion
         public static int[] rotate(int[] array, int d)
         {
             int[] newArray = new int[array.Length];
-            for(int i=0; i<array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 int arrIndex = i - d;
                 int rotation = array.Length + arrIndex;
 
-                if(arrIndex>=0)
+                if (arrIndex >= 0)
                 {
                     newArray[arrIndex] = array[i];
                 }
@@ -252,24 +265,24 @@ namespace DotnetQuestion
         }
 
         /*Q12 grab a substring that lies in given range of start and end.
-         * 
+          
          * @param string str
          * @param string value
          * return string
          */
         public static string substr(string str, string value)
         {
-            string[] names =( value.Split(" "));
+            string[] names = (value.Split(" "));
             int s = Convert.ToInt32(names[0]);
             int e = Convert.ToInt32(names[1]);
 
-            foreach(char c in str)
+            foreach (char c in str)
             {
-                if(!char.IsLetter(c))
+                if (!char.IsLetter(c))
                 {
                     Console.WriteLine("enter a valid string");
                 }
-               
+
             }
             if (s < 0 || s >= e || e > str.Length)
             {
@@ -277,7 +290,90 @@ namespace DotnetQuestion
             }
 
             int Strlength = e - s;
-            return str.Substring(s, Strlength);    
+            return str.Substring(s, Strlength);
+        }
+
+        /*Q13 Based on certain conditions check whether given string is valid or invalid.
+         
+         * @param string name
+         * @return string
+         */
+        public static void Validate(string[] name)
+        {
+            
+            for (int i = 0; i < name.Length; i++)
+            {
+                if (name[i].Length < 8 || name[i].Length > 30)
+                {
+                    Console.WriteLine(name[i]+"invalid");
+                }
+                else
+                {
+                    string temp = name[i];
+                    int validation = 0;
+                    if (!char.IsLetter(temp[0]))
+                    {
+                        Console.WriteLine(temp + "invalid");
+                    }
+                    else
+                    {
+                        for (int j = 1; j < temp.Length - 1; j++)
+                        {
+                            if (((int)temp[j] >= 65 && (int)temp[j] <= 90) || ((int)temp[j] >= 97 && (int)temp[j] <= 122) || (int)temp[j] == 95)
+                            {
+                                validation = 0;
+                            }
+                            else
+                            {
+                                validation += 1;
+                            }
+                            Console.WriteLine(validation != 0 ? temp + "invalid" : temp + "valid");
+                            Console.ReadKey();
+                        }
+                    }
+                }
+            }
+        }
+
+        /*Q14 Convert plaintext into ciphertext.
+         
+         * @param int n
+         * @param string s
+         * @param int k
+         * @return string
+         */
+        public static string Cipher(StringBuilder s, int k)
+        {
+            k %= 26;
+            for (int i = 0; i < s.Length; i++)
+            {
+                int a = Convert.ToInt32(s[i]);
+
+                if ((a >= 65 && a <= 90))
+                {
+                    if (a + k > 90)
+                    {
+                        s[i] = (char)(k - Math.Abs(a - 90) + 64);
+                    }
+                    else
+                    {
+                        s[i] = (char)(a + k);
+                    }
+                }
+                else if ((a >= 97 && a <= 122))
+                {
+                    if (a + k > 122)
+                    {
+                        s[i] = (char)(k - Math.Abs(a - 122) + 96);
+                    }
+                    else
+                    {
+                        s[i] = (char)(a + k);
+                    }
+                }   
+            }
+            return s.ToString();
         }
     }
 }
+
